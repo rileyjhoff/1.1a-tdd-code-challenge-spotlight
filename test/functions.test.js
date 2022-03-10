@@ -18,11 +18,11 @@ test('this test should pass for addExclamationPoints', (expect) => {
 
     expect.equal(actual1, expected1, 'should return hello!!!');
 
-    const expected2 = 'is this working!!!';
+    const expected2 = '100!!!';
 
-    const actual2 = addExclamationPoints('is this working');
+    const actual2 = addExclamationPoints(100);
 
-    expect.equal(actual2, expected2, 'should return is this working!!!');
+    expect.equal(actual2, expected2, 'argument is a number. should return 100!!!');
 });
 
 
@@ -68,6 +68,7 @@ test('this test should pass for multiplyBy12ThenHalve', (expect) => {
     const actual = multiplyBy12ThenHalve(4);
 
     expect.equal(actual, expected);
+
 });
 
 skip('this test should be skipped', (expect) => {
