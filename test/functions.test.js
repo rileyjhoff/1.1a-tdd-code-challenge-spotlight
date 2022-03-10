@@ -10,19 +10,19 @@ test('this test should pass for addExclamationPoints', (expect) => {
 
     const actual = addExclamationPoints('bunny rabbit');
 
-    expect.equal(actual, expected, 'should equal bunny rabbit!!!');
+    expect.equal(actual, expected, 'should return bunny rabbit!!!');
 
     const expected1 = 'hello!!!';
 
     const actual1 = addExclamationPoints('hello');
 
-    expect.equal(actual1, expected1, 'should equal hello!!!');
+    expect.equal(actual1, expected1, 'should return hello!!!');
 
     const expected2 = 'is this working!!!';
 
     const actual2 = addExclamationPoints('is this working');
 
-    expect.equal(actual2, expected2, 'should equal is this working!!!');
+    expect.equal(actual2, expected2, 'should return is this working!!!');
 });
 
 
@@ -39,7 +39,19 @@ test('this test should pass for multiplyBySeven', (expect) => {
 
     const actual = multiplyBySeven(4);
 
-    expect.equal(actual, expected);
+    expect.equal(actual, expected, 'should return 28. 4 times 7 is 28.');
+
+    const expected1 = 49;
+
+    const actual1 = multiplyBySeven(7);
+
+    expect.equal(actual1, expected1, 'should return 49. 7 times 7 is 49.');
+
+    const expected2 = 700;
+
+    const actual2 = multiplyBySeven('100');
+
+    expect.equal(actual2, expected2, 'argument is 100 as a string. should return 700. 100 times 7 is 700.');
 });
 
 skip('this test should be skipped', (expect) => {
