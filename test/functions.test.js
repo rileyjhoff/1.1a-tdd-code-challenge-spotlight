@@ -260,21 +260,21 @@ skip('this test should be skipped', (expect) => {
 });
 
 test('getRandomNumber should return a random number between 0 and 5', (expect) => {
-    const expected = 0 <= getRandomNumber() <= 5;
+    const expected = true;
 
-    const actual = true;
+    const actual = 0 <= getRandomNumber() <= 5;
 
     expect.equal(actual, expected, 'should return as true. this tests to see if getRandomNumber returns a value greater than or equal to 0 and less than or equal to 5');
 
-    const expected1 = 5 < getRandomNumber();
-
-    const actual1 = false;
+    const expected1 = false;
+    
+    const actual1 = getRandomNumber() > 5;
 
     expect.equal(actual1, expected1, 'should return as false. this tests to see if getRandomNumber returns a value greater than 5');
 
-    const expected2 = 0 > getRandomNumber();
+    const expected2 = false;
 
-    const actual2 = false;
+    const actual2 = getRandomNumber() < 0;
 
     expect.equal(actual2, expected2, 'should return as false. this tests to see if getRandomNumber returns a value less than 0');
 });
