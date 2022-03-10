@@ -67,8 +67,19 @@ test('this test should pass for multiplyBy12ThenHalve', (expect) => {
 
     const actual = multiplyBy12ThenHalve(4);
 
-    expect.equal(actual, expected);
+    expect.equal(actual, expected, 'should return 24. 4 times 12 is 48. 48 divided by 2 is 24');
 
+    const expected1 = 60;
+
+    const actual1 = multiplyBy12ThenHalve(10);
+
+    expect.equal(actual1, expected1, 'should return 60. 10 times 12 is 120. 120 divided by 2 is 120');
+
+    const expected2 = 42;
+
+    const actual2 = multiplyBy12ThenHalve('7');
+
+    expect.equal(actual2, expected2, 'argument is 7 as a string. should return 42. 7 times 12 is 84. 84 divided by 2 is 42');
 });
 
 skip('this test should be skipped', (expect) => {
