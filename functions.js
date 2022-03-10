@@ -82,9 +82,7 @@ Output:
 
 export function returnAsAnArray(firstNumber, secondNumber, thirdNumber) {
     const arr = [];
-    arr.push(firstNumber);
-    arr.push(secondNumber);
-    arr.push(thirdNumber);
+    arr.push(firstNumber, secondNumber, thirdNumber);
     return arr;
 }
 
