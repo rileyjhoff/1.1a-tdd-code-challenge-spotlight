@@ -10,7 +10,19 @@ test('this test should pass for addExclamationPoints', (expect) => {
 
     const actual = addExclamationPoints('bunny rabbit');
 
-    expect.equal(actual, expected);
+    expect.equal(actual, expected, 'should equal bunny rabbit!!!');
+
+    const expected1 = 'hello!!!';
+
+    const actual1 = addExclamationPoints('hello');
+
+    expect.equal(actual1, expected1, 'should equal hello!!!');
+
+    const expected2 = 'is this working!!!';
+
+    const actual2 = addExclamationPoints('is this working');
+
+    expect.equal(actual2, expected2, 'should equal is this working!!!');
 });
 
 
