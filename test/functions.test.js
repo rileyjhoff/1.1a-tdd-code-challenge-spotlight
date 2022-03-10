@@ -208,7 +208,19 @@ test('this test should pass for getSecondItem', (expect) => {
 
     const actual = getSecondItem(['kiwi', 'apple', 'orange', 'plum']);
 
-    expect.equal(actual, expected);
+    expect.equal(actual, expected, 'should return apple. apple is the second item in the array passed through getSecondItem');
+
+    const expected1 = 'there are only two items in this array';
+
+    const actual1 = getSecondItem(['kiwi', 'there are only two items in this array']);
+
+    expect.equal(actual1, expected1, 'should return there are only two items in this array. there are only two items in this array is the second item in the array passed through getSecondItem');
+
+    const expected2 = 'grab me!';
+
+    const actual2 = getSecondItem(['kiwi', 'grab me!', 'orange', 'plum', 'one more item', 'and another', 'couple more', 'done', 'actually, grab me!']);
+
+    expect.equal(actual2, expected2, 'should return grab me!. grab me! is the second item in the array passed through getSecondItem');
 });
 
 skip('this test should be skipped', (expect) => {
@@ -224,7 +236,19 @@ test('this test should pass for getLastItem', (expect) => {
 
     const actual = getLastItem(['kiwi', 'apple', 'orange', 'plum']);
 
-    expect.equal(actual, expected);
+    expect.equal(actual, expected, 'should return plum. plum is the last item in the array passed through getLastItem');
+
+    const expected1 = 'there are only two items in this array';
+
+    const actual1 = getLastItem(['kiwi', 'there are only two items in this array']);
+
+    expect.equal(actual1, expected1, 'should return there are only two items in this array. there are only two items in this array is the last item in the array passed through getLastItem');
+
+    const expected2 = 'actually, grab me!';
+
+    const actual2 = getLastItem(['kiwi', 'grab me!', 'orange', 'plum', 'one more item', 'and another', 'couple more', 'done', 'actually, grab me!']);
+
+    expect.equal(actual2, expected2, 'should return actually, grab me!. actually, grab me! is the last item in the array passed through getLastItem');
 });
 
 skip('this test should be skipped', (expect) => {
