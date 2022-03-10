@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 import { 
-    addExclamationPoints, multiplyBySeven, multiplyBy12ThenHalve, divideThenMultiply, returnAsAnArray, returnAsAString, makeLuckyGreeting, getSecondItem, getLastItem,
+    addExclamationPoints, multiplyBySeven, multiplyBy12ThenHalve, divideThenMultiply, returnAsAnArray, returnAsAString, makeLuckyGreeting, getSecondItem, getLastItem, getRandomNumber,
 } from '../functions.js';
 
 const { test, skip } = QUnit;
@@ -91,7 +91,7 @@ test('this test should pass for returnAsAString', (expect) => {
 
     const actual = returnAsAString(8, 4, 5);
 
-    expect.deepEqual(actual, expected);
+    expect.equal(actual, expected);
 });
 
 skip('this test should be skipped', (expect) => {
@@ -107,7 +107,7 @@ test('this test should pass for makeLuckyGreeting', (expect) => {
 
     const actual = makeLuckyGreeting(8, 4);
 
-    expect.deepEqual(actual, expected);
+    expect.equal(actual, expected);
 });
 
 skip('this test should be skipped', (expect) => {
@@ -123,7 +123,7 @@ test('this test should pass for getSecondItem', (expect) => {
 
     const actual = getSecondItem(['kiwi', 'apple', 'orange', 'plum']);
 
-    expect.deepEqual(actual, expected);
+    expect.equal(actual, expected);
 });
 
 skip('this test should be skipped', (expect) => {
@@ -139,7 +139,23 @@ test('this test should pass for getLastItem', (expect) => {
 
     const actual = getLastItem(['kiwi', 'apple', 'orange', 'plum']);
 
-    expect.deepEqual(actual, expected);
+    expect.equal(actual, expected);
+});
+
+skip('this test should be skipped', (expect) => {
+    const expected = true;
+
+    const actual = true;
+
+    expect.equal(actual, expected);
+});
+
+test('this test should pass for getRandomNumber', (expect) => {
+    const expected = 0 <= getRandomNumber() <= 5;
+
+    const actual = true;
+
+    expect.equal(actual, expected);
 });
 
 skip('this test should be skipped', (expect) => {
