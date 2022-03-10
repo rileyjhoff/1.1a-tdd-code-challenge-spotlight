@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 import { 
-    addExclamationPoints, multiplyBySeven, multiplyBy12ThenHalve, divideThenMultiply, returnAsAnArray, returnAsAString,
+    addExclamationPoints, multiplyBySeven, multiplyBy12ThenHalve, divideThenMultiply, returnAsAnArray, returnAsAString, makeLuckyGreeting,
 } from '../functions.js';
 
 const { test, skip } = QUnit;
@@ -90,6 +90,22 @@ test('this test should pass for returnAsAString', (expect) => {
     const expected = '845';
 
     const actual = returnAsAString(8, 4, 5);
+
+    expect.deepEqual(actual, expected);
+});
+
+skip('this test should be skipped', (expect) => {
+    const expected = true;
+
+    const actual = true;
+
+    expect.equal(actual, expected);
+});
+
+test('this test should pass for makeLuckyGreeting', (expect) => {
+    const expected = 'Hello! Your lucky number for the day is 12.';
+
+    const actual = makeLuckyGreeting(8, 4);
 
     expect.deepEqual(actual, expected);
 });
