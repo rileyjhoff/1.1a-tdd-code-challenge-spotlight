@@ -51,7 +51,7 @@ test('this test should pass for multiplyBySeven', (expect) => {
 
     const actual2 = multiplyBySeven('100');
 
-    expect.equal(actual2, expected2, 'argument is 100 as a string. should return 700. 100 times 7 is 700.');
+    expect.equal(actual2, expected2, 'argument is 100 in a string. should return 700. 100 times 7 is 700.');
 });
 
 skip('this test should be skipped', (expect) => {
@@ -79,7 +79,7 @@ test('this test should pass for multiplyBy12ThenHalve', (expect) => {
 
     const actual2 = multiplyBy12ThenHalve('7');
 
-    expect.equal(actual2, expected2, 'argument is 7 as a string. should return 42. 7 times 12 is 84. 84 divided by 2 is 42');
+    expect.equal(actual2, expected2, 'argument is 7 in a string. should return 42. 7 times 12 is 84. 84 divided by 2 is 42');
 });
 
 skip('this test should be skipped', (expect) => {
@@ -107,7 +107,7 @@ test('this test should pass for divideThenMultiply', (expect) => {
 
     const actual2 = divideThenMultiply('-20', '4', '-5');
 
-    expect.equal(actual2, expected2, 'all arguments are numbers as string. should return 25. -20 divided by 4 is -5. -5 times -5 is 25.');
+    expect.equal(actual2, expected2, 'all arguments are numbers in strings. should return 25. -20 divided by 4 is -5. -5 times -5 is 25.');
 });
 
 skip('this test should be skipped', (expect) => {
@@ -179,7 +179,20 @@ test('this test should pass for makeLuckyGreeting', (expect) => {
 
     const actual = makeLuckyGreeting(8, 4);
 
-    expect.equal(actual, expected);
+    expect.equal(actual, expected, 'should return Hello! your lucky number for the day is 12. 8 plus 4 is 12.');
+    
+    const expected1 = 'Hello! Your lucky number for the day is 0.';
+
+    const actual1 = makeLuckyGreeting(-8, 8);
+
+    expect.equal(actual1, expected1, 'should return Hello! your lucky number for the day is 0. -8 plus 8 is 0.');
+
+    const expected2 = 'Hello! Your lucky number for the day is 1.';
+
+    const actual2 = makeLuckyGreeting('-100', '101');
+
+    expect.equal(actual2, expected2, 'arguments are numbers in strings. should return Hello! your lucky number for the day is 1. -100 plus 101 is 1.');
+
 });
 
 skip('this test should be skipped', (expect) => {
