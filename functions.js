@@ -64,7 +64,7 @@ Output:
 */
 
 export function divideThenMultiply(firstNumber, secondNumber, thirdNumber) {
-    return (Number(firstNumber) * Number(secondNumber)) / Number(thirdNumber);
+    return (Number(firstNumber) / Number(secondNumber)) * Number(thirdNumber);
 }
 
 
