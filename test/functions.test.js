@@ -5,7 +5,7 @@ import {
 
 const { test, skip } = QUnit;
 
-test('this test should pass for addExclamationPoints', (expect) => {
+test('addExclamationPoints should return a string that adds !!! to the argument. argument can be a number or string', (expect) => {
     const expected = 'bunny rabbit!!!';
 
     const actual = addExclamationPoints('bunny rabbit');
@@ -34,7 +34,7 @@ skip('this test should be skipped', (expect) => {
     expect.equal(actual, expected);
 });
 
-test('this test should pass for multiplyBySeven', (expect) => {
+test('multiplyBySeven should take a number, or a number in a string, as an argument and return a number equal to whatever the argument multiplied by 7 equals', (expect) => {
     const expected = 28;
 
     const actual = multiplyBySeven(4);
@@ -62,7 +62,7 @@ skip('this test should be skipped', (expect) => {
     expect.equal(actual, expected);
 });
 
-test('this test should pass for multiplyBy12ThenHalve', (expect) => {
+test('multiplyBy12ThenHalve should take a number, or a number in a string, as an argument and return a number equal to whatever the argument multiplied by 12, then divided by 2 equals', (expect) => {
     const expected = 24;
 
     const actual = multiplyBy12ThenHalve(4);
@@ -90,7 +90,7 @@ skip('this test should be skipped', (expect) => {
     expect.equal(actual, expected);
 });
 
-test('this test should pass for divideThenMultiply', (expect) => {
+test('divideThenMultiply should take three numbers, can also be numbers in strings, as arguments and return a number equal to whatever the first argument divided by the second argument, then multiplied by the third argument equals', (expect) => {
     const expected = 10;
 
     const actual = divideThenMultiply(8, 4, 5);
@@ -118,7 +118,7 @@ skip('this test should be skipped', (expect) => {
     expect.equal(actual, expected);
 });
 
-test('this test should pass for returnAsAnArray', (expect) => {
+test('returnAsAnArray should take three numbers as an argument and return those numbers in an array', (expect) => {
     const expected = [8, 4, 5];
 
     const actual = returnAsAnArray(8, 4, 5);
