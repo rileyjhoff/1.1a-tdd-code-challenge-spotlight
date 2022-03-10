@@ -41,11 +41,11 @@ test('this test should pass for multiplyBySeven', (expect) => {
 
     expect.equal(actual, expected, 'should return 28. 4 times 7 is 28.');
 
-    const expected1 = 49;
+    const expected1 = -49;
 
-    const actual1 = multiplyBySeven(7);
+    const actual1 = multiplyBySeven(-7);
 
-    expect.equal(actual1, expected1, 'should return 49. 7 times 7 is 49.');
+    expect.equal(actual1, expected1, 'should return -49. -7 times 7 is -49.');
 
     const expected2 = 700;
 
@@ -69,11 +69,11 @@ test('this test should pass for multiplyBy12ThenHalve', (expect) => {
 
     expect.equal(actual, expected, 'should return 24. 4 times 12 is 48. 48 divided by 2 is 24');
 
-    const expected1 = 60;
+    const expected1 = -60;
 
-    const actual1 = multiplyBy12ThenHalve(10);
+    const actual1 = multiplyBy12ThenHalve(-10);
 
-    expect.equal(actual1, expected1, 'should return 60. 10 times 12 is 120. 120 divided by 2 is 120');
+    expect.equal(actual1, expected1, 'should return -60. -10 times 12 is -120. 120 divided by 2 is -60');
 
     const expected2 = 42;
 
