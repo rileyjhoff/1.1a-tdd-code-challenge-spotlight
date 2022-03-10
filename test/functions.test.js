@@ -123,7 +123,19 @@ test('this test should pass for returnAsAnArray', (expect) => {
 
     const actual = returnAsAnArray(8, 4, 5);
 
-    expect.deepEqual(actual, expected);
+    expect.deepEqual(actual, expected, 'should return the array [8, 4, 5]. numbers passed are 8, 4, 5.');
+
+    const expected1 = [23423, 5555, 1];
+
+    const actual1 = returnAsAnArray(23423, 5555, 1);
+
+    expect.deepEqual(actual1, expected1, 'should return the array [23423, 5555, 1]. numbers passed are 23423, 5555, 1');
+
+    const expected2 = [0, -234, 5.5];
+
+    const actual2 = returnAsAnArray(0, -234, 5.5);
+
+    expect.deepEqual(actual2, expected2, 'should return the array [0, -234, 5.5]. numbers passed are 0, -234, 5.5');
 });
 
 skip('this test should be skipped', (expect) => {
@@ -139,7 +151,19 @@ test('this test should pass for returnAsAString', (expect) => {
 
     const actual = returnAsAString(8, 4, 5);
 
-    expect.equal(actual, expected);
+    expect.equal(actual, expected, 'should return 845. numbers passed are 8, 4, 5');
+
+    const expected1 = '30-45.065';
+
+    const actual1 = returnAsAString(30, -4, 5.065);
+
+    expect.equal(actual1, expected1, 'should return 30-45.065. numbers passed are 30, -4, 5.065');
+
+    const expected2 = '-0.1234567890';
+
+    const actual2 = returnAsAString(-0.123, 456, 7890);
+
+    expect.equal(actual2, expected2, 'should return -0.1234567890. numbers passed are -0.123, 456, 7890');
 });
 
 skip('this test should be skipped', (expect) => {
