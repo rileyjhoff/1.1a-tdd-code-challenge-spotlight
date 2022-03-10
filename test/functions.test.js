@@ -95,7 +95,19 @@ test('this test should pass for divideThenMultiply', (expect) => {
 
     const actual = divideThenMultiply(8, 4, 5);
 
-    expect.equal(actual, expected);
+    expect.equal(actual, expected, 'should return 10. 8 divided by 4 is 2. 2 times 5 is 10.');
+
+    const expected1 = -18;
+
+    const actual1 = divideThenMultiply(-9, 2, 4);
+
+    expect.equal(actual1, expected1, 'should return -18. -9 divided by 2 is -4.5. -4.5 times 4 is -18.');
+
+    const expected2 = 25;
+
+    const actual2 = divideThenMultiply('-20', '4', '-5');
+
+    expect.equal(actual2, expected2, 'all arguments are numbers as string. should return 25. -20 divided by 4 is -5. -5 times -5 is 25.');
 });
 
 skip('this test should be skipped', (expect) => {
