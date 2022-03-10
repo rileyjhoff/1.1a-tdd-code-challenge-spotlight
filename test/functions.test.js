@@ -146,7 +146,7 @@ skip('this test should be skipped', (expect) => {
     expect.equal(actual, expected);
 });
 
-test('this test should pass for returnAsAString', (expect) => {
+test('returnAsAString should take in three numbers and return those numbers mushed together as a string', (expect) => {
     const expected = '845';
 
     const actual = returnAsAString(8, 4, 5);
@@ -174,7 +174,7 @@ skip('this test should be skipped', (expect) => {
     expect.equal(actual, expected);
 });
 
-test('this test should pass for makeLuckyGreeting', (expect) => {
+test('makeLuckyGreeting should take in two numbers, or numbers in a string, and return a greeting announcing that the sum of those numbers is todays lucky number', (expect) => {
     const expected = 'Hello! Your lucky number for the day is 12.';
 
     const actual = makeLuckyGreeting(8, 4);
@@ -203,7 +203,7 @@ skip('this test should be skipped', (expect) => {
     expect.equal(actual, expected);
 });
 
-test('this test should pass for getSecondItem', (expect) => {
+test('getSecondItem should take an array and return the second item in the array', (expect) => {
     const expected = 'apple';
 
     const actual = getSecondItem(['kiwi', 'apple', 'orange', 'plum']);
@@ -231,7 +231,7 @@ skip('this test should be skipped', (expect) => {
     expect.equal(actual, expected);
 });
 
-test('this test should pass for getLastItem', (expect) => {
+test('getLastItem should take an array and return the LAST item in the array, no matter the arrays length', (expect) => {
     const expected = 'plum';
 
     const actual = getLastItem(['kiwi', 'apple', 'orange', 'plum']);
@@ -259,7 +259,7 @@ skip('this test should be skipped', (expect) => {
     expect.equal(actual, expected);
 });
 
-test('this test should pass for getRandomNumber', (expect) => {
+test('getRandomNumber should return a random number between 0 and 5', (expect) => {
     const expected = 0 <= getRandomNumber() <= 5;
 
     const actual = true;
